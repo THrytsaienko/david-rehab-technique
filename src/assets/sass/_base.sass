@@ -30,7 +30,15 @@ $color-grey-light-2: #b9b9b9 // text
 
 
 
-	
+$phoneWidth: 320px
+$tablet-portWidth: 480px
+$tablet-landWidth: 768px
+$desktopWidth: 1024px
+
+$phone: "only screen and (max-width: " + $phoneWidth + ")"
+$tablet-port: "only screen and (min-width: " + ($phoneWidth + 1) + ") and (max-width: " + $tablet-portWidth + ")"
+$tablet-land: "only screen and (min-width: " + ($tablet-portWidth + 1) + ") and (max-width: " + $tablet-landWidth + ")"
+$desktop: "only screen and (min-width: " + ($tablet-landWidth + 1) + ") and (max-width: " + $desktopWidth + ")"
 
 
 
@@ -47,26 +55,17 @@ html
 	box-sizing: border-box
 	font-size: 62.5% //1rem = 10px, 10px/16px = 62.5%
 	
-	@include respond(desktop)
-		font-size: 60% // 1200
-	
-	@include respond(tab-land-biger)
-		font-size: 57% //1100
-		
-	@include respond(tab-land-smaller) 
-        font-size: 53% //1000
-	
-	@include respond(tab-port)
-		font-size: 50% //900
-		
-	 @include respond(phone)
-	 	font-size: 47% //650
-	
-	@include respond(small-phone)
-		font-size: 43% //550
-	
-	@include respond(super-small-phone)
-		font-size: 40% //400
+	@media #{$desktop}
+		font-size: 60%	
+
+	@media #{$tablet-land}
+		font-size: 57%
+
+	@media #{$tablet-port}
+		font-size: 57%
+
+	@media #{$phone}
+		font-size: 55%
 
 
 body

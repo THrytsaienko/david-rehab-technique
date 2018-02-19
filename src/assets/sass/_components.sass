@@ -4,22 +4,34 @@
 	margin: 0 auto
 
 
-.container-inner 
+.container-inner
+	width: 100%
 	max-width: 117rem
 	margin: 0 auto
 
 .nav
 	.main-menu
-		justify-content: space-between
-		align-items: center
+		
 		&__logo
 			padding: 3rem 0 2.5rem 0
+			@media #{$desktop}
+				padding: 3rem 3rem 2.5rem 2rem
+			@media #{$tablet-land}
+				padding: 3rem 3rem 2.5rem 2rem
+			@media #{$tablet-port}
+				padding: 3rem 3rem 2.5rem 2rem
+			@media #{$phone}
+				padding: 3rem 3rem 2.5rem 2rem
 		&__list-item
 			display: inline-block
 		&__link
 			color: $color-grey-dark
 			text-transform: uppercase
 			font-size: 1.2rem
+		.main-menu__nav
+			@media #{$phone}
+				padding: 1rem 3rem 2.5rem 2rem
+				text-align: center
 		
 .hero
 	background-image: url('images/bg-1.png')
@@ -31,6 +43,8 @@
 	&__text
 		font-size: 1.9rem
 		padding: 4.5rem 0 9rem 0
+		@media #{$phone}
+			padding: 4.5rem 0 6rem 0
 	&__paragraph:first-child
 		padding-bottom: 4rem
 	&__title
@@ -51,9 +65,20 @@
 		background-color: transparent
 		color: $color-primary
 		margin-left: 3.5rem
+		@media #{$tablet-port}
+			margin-left: 0
+			margin-top: 4rem
+		@media #{$phone}
+			margin-left: 0
+			margin-top: 4rem
 	.container-hero
-		width: 64rem
+		width: 100%
+		max-width: 64rem
 		padding: 11rem 0 10rem 10rem
+		@media #{$tablet-port}
+			padding: 9rem 3rem 7rem 7rem
+		@media #{$phone}
+			padding: 7rem 3rem 5rem 3rem
 
 .about
 	background-color: $color-primary-1
@@ -64,14 +89,29 @@
 		color: #fff
 		text-transform: uppercase
 		font-weight: 400
+		@media #{$desktop}
+			padding-top: 3rem
+		@media #{$tablet-land}
+			padding-top: 3rem
+		@media #{$tablet-port}
+			padding: 3rem 2rem 0 2rem
+			text-align: center
+		@media #{$phone}
+			padding: 3rem 2rem 0 2rem
+			text-align: center
 	&__list
 		padding: 4.5rem 0 4rem 0
 		color: #ffffff
 		font-size: 1.6rem
+		@media #{$tablet-port}
+			padding: 3.5rem 2rem 4rem 3rem
+		@media #{$phone}
+			padding: 3.5rem 2rem 4rem 3rem
 
 .what
 	.container-what
-		width: 97rem
+		width: 100%
+		max-width: 97rem
 		margin: 0 auto
 	&__title
 		color: $color-primary-1
@@ -84,18 +124,49 @@
 		font-size: 1.9rem
 		text-align: center
 		padding-bottom: 4rem
+		@media #{$tablet-land}
+			padding: 0 3rem 4rem 3rem
+		@media #{$tablet-port}
+			padding: 0 3rem 4rem 3rem
+		@media #{$phone}
+			padding: 0 3rem 4rem 3rem
 	&__text
 		font-size: 1.5rem
 		text-align: center
 		padding-top: 5.5rem
 		padding-bottom: 4.5rem
+		@media #{$desktop}
+			padding: 4.5rem 2rem 3.5rem 2rem
+		@media #{$tablet-land}
+			padding: 4rem 2rem
+		@media #{$tablet-port}
+			padding: 3rem 2rem
+		@media #{$phone}
+			padding: 3rem 2rem
 	.slider
 		&__image
 			width: 100%
 			margin-bottom: 3.8rem
+			@media #{$desktop}
+				margin-bottom: 2.5rem
+			@media #{$tablet-land}
+				margin-bottom: 2rem
+	&__list
+		@media #{$desktop}
+			padding: 0 2rem
+		@media #{$tablet-land}
+			padding: 0 2rem
+		@media #{$tablet-port}
+			padding: 0 2rem
 	&__list-item
 		font-size: 1.5rem
 		line-height: 2.8rem
+		@media #{$tablet-land}
+			padding: 0 2rem 1rem 2rem
+		@media #{$tablet-port}
+			padding: 0 2rem 1rem 2rem
+		@media #{$phone}
+			padding: 0 3rem 1rem 3rem
 		&__icon
 			width: 1.5rem
 			height: 1.5rem
@@ -104,9 +175,12 @@
 .call
 	background-color: $color-primary-2
 	.container-call
+		width: 100%
 		max-width: 80rem
 		margin: 0 auto
 		text-align: center
+		@media #{$tablet-port}
+			padding: 0 2rem
 	&__title
 		color: $color-grey-light-1
 		padding-top: 6rem
@@ -117,6 +191,10 @@
 		color: $color-grey-light-2
 		font-size: 1.7rem
 		padding-bottom: 5rem
+		@media #{$tablet-port}
+			padding-bottom: 2rem
+		@media #{$phone}
+			padding: 0 2rem 2rem 2rem
 	&__btn
 		margin: 4.5rem 0 6rem 0
 		text-transform: uppercase
@@ -128,13 +206,14 @@
 		font-weight: 700
 
 .callback__adress
+	width: 100%
 	max-width: 80rem
 	margin: 0 auto
 
-.adress
-	&__list
-		
+.adress	
 	&__list-item
+		@media #{$tablet-port}
+			padding: 2rem 0 2rem 0
 		.list-item__city
 			font-size: 2rem
 			color: $color-grey-light-1
@@ -144,7 +223,8 @@
 
 .cases
 	.container-cases
-		width: 113rem
+		width: 100%
+		max-width: 113rem
 		margin: 0 auto
 	&__title
 		font-weight: 400
@@ -152,10 +232,20 @@
 		color: $color-primary-1
 		padding: 9.5rem 0 6rem 0
 		text-align: center
+		@media #{$tablet-land}
+			padding: 7.5rem 0 6rem 0
+		@media #{$tablet-port}
+			padding: 6rem 2rem 6rem 2rem
 	.box-text
 		position: relative
 		padding-left: 6.5rem
 		padding-right: 8rem
+		@media #{$tablet-port}
+			padding-bottom: 3rem
+		@media #{$phone}
+			padding-bottom: 3rem
+			padding-left: 4rem
+			padding-right: 5rem
 		&__icon
 			width: 1.5rem
 			height: 2.5rem
@@ -180,6 +270,8 @@
 			padding-bottom: 1.5rem
 			color: $color-grey-dark
 			font-weight: 400
+			@media #{$phone}
+				padding-top: 4rem
 		&__paragraph,
 		&__details
 			font-size: 1.5rem
@@ -190,6 +282,10 @@
 		&__img
 			width: 100%
 			padding-bottom: 8rem
+			@media #{$tablet-land}
+				padding-bottom: 3rem
+			@media #{$phone}
+				padding-bottom: 3rem
 
 .sheme
 	background-color: $color-primary-6
@@ -200,6 +296,8 @@
 		color: $color-primary-4
 		font-weight: 400
 		text-align: center
+		@media #{$tablet-port}
+			padding-top: 5rem
 	&__steps
 		font-size: 1.9rem
 		font-weight: 900
@@ -211,19 +309,52 @@
 	&__steps
 		.step-1
 			margin-left: 10rem
+			@media #{$desktop}
+				margin-left: 5rem
+			@media #{$tablet-land}
+				margin-left: 3rem
+			@media #{$tablet-port}
+				margin: 0 3rem 2rem 3rem
+			@media #{$phone}
+				margin: 0 3rem 2rem 3rem
 		.step-2
 			margin-left: 8rem
+			@media #{$desktop}
+				margin-left: 5rem
+			@media #{$tablet-land}
+				margin-left: 3rem
+			@media #{$tablet-port}
+				margin: 0 3rem 2rem 3rem
+			@media #{$phone}
+				margin: 0 3rem 2rem 3rem
 		.step-3
 			margin-left: 12rem
-			
+			@media #{$desktop}
+				margin-left: 5rem
+			@media #{$tablet-land}
+				margin-left: 3rem
+				padding-right: 2rem
+			@media #{$tablet-port}
+				margin: 0 3rem 2rem 3rem
+			@media #{$phone}
+				margin: 0 3rem 2rem 3rem
 	&__img
 		width: 100%
 		margin-top: 3.3rem
 		margin-bottom: 9.5rem
+		@media #{$desktop}
+			margin-bottom: 7rem
+		@media #{$tablet-land}
+			margin-bottom: 5rem
+		@media #{$tablet-port}
+			margin-bottom: 5rem
+		@media #{$phone}
+			margin-bottom: 5rem
 
 .why
 	.container-why
-		width: 93rem
+		width: 100%
+		max-width: 93rem
 		margin: 0 auto
 	&__title
 		text-transform: uppercase
@@ -232,13 +363,33 @@
 		color: $color-primary-4
 		font-weight: 400
 		text-align: center
+		@media #{$phone}
+			padding: 6rem 2rem
 	&__box
 		margin-bottom: 8rem
+		@media #{$desktop}
+			margin-bottom: 7rem
+			padding: 0 2rem
+		@media #{$tablet-land}
+			margin: 0 3rem 6rem 3rem
+			padding: 0 2rem
+		@media #{$tablet-port}
+			margin: 0 3rem 6rem 3rem
+			padding: 0 2rem
+		@media #{$phone}
+			margin: 0 3rem 6rem 3rem
+			padding: 0 2rem
 		&__img
 			width: 10rem
 			height: 12rem
+			@media #{$phone}
+				margin: 0 0 3rem 0
 		&__text
 			padding-left: 6.5rem
+			@media #{$tablet-port}
+				padding-left: 5rem
+			@media #{$phone}
+				padding-left: 3rem
 			.box__paragraph
 				font-size: 1.6rem
 			.box__title
@@ -247,6 +398,8 @@
 			width: 11.5rem
 		.text-1
 			padding-left: 5.5rem
+			@media #{$phone}
+				padding-left: 3rem
 	
 		
 .callback
@@ -258,6 +411,8 @@
 		text-transform: uppercase
 		text-align: center
 		color: $color-primary-4
+		@media #{$phone}
+			padding: 6rem 2rem 3rem 2rem
 	&__text
 		color: $color-grey-light-2
 		font-size: 1.7rem
@@ -265,6 +420,12 @@
 		text-align: center
 		&:last-child
 			margin-top: 6rem
+			@media #{$tablet-port}
+				margin-top: 4rem
+		@media #{$tablet-port}
+			padding: 0 3rem 3rem 3rem
+		@media #{$phone}
+			padding: 0 3rem 3rem 3rem
 	&__btn
 		background-color: $color-primary
 		color: #fff
@@ -274,14 +435,31 @@
 		text-transform: uppercase
 		margin: 7rem auto 6.5rem auto
 		text-align: center
+		@media #{$desktop}
+			margin: 6rem auto 5.5rem auto
+		@media #{$tablet-land}
+			margin: 5rem auto 4.5rem auto
+		@media #{$tablet-port}
+			margin: 3rem auto 4.5rem auto
+		@media #{$phone}
+			margin: 3rem auto 4.5rem auto
+			padding: 1.7rem 7rem
 	&__form-group
 		.form-group__item
 			width: 32%
+			@media #{$desktop}
+				width: 30%
 		.form-group__input
 			height: 5.2rem
+			border: 1px solid $color-grey-light-1
 			&::placeholder
 				padding-left: 1.5rem
 				font-size: 1.7rem
+				@media #{$desktop}
+					padding-left: 1.2rem
+					font-size: 1.5rem
+				@media #{$phone}
+					font-size: 1.4rem
 		.form-group__label
 			font-size: 1.5rem
 			margin-bottom: .7rem
@@ -289,10 +467,18 @@
 .footer
 	background-color: $color-footer
 	.container-footer
-		width: 97rem
+		width: 100%
+		max-width: 97rem
 		margin: 0 auto
 	&__text
 		font-size: 1.2rem
 		color: #fff
 		padding-top: 2.7rem
 		padding-bottom: 1rem
+		margin-left: 3rem
+		@media #{$tablet-land}
+			margin-left: 3rem
+		@media #{$tablet-port}
+			margin-left: 6rem
+		@media #{$phone}
+			text-align: center

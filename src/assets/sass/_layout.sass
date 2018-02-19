@@ -3,24 +3,45 @@
 
 .main-menu
 	display: flex
+	justify-content: space-around
+	align-items: center
+	@media #{$phone}
+		flex-direction: column
 
 .about
 	.container-inner
 		display: flex
+		@media #{$desktop}
+			flex-direction: column
+		@media #{$tablet-land}
+			flex-direction: column
+		@media #{$tablet-port}
+			flex-direction: column
+		@media #{$phone}
+			flex-direction: column
 
 .what
 	&__list
 		display: flex
 		flex-wrap: wrap
 		justify-content: space-between
+		@media #{$phone}
+			flex-direction: column
 	&__list-item
 		flex-basis: 50%
-	// 	
 
 .adress
 	&__list
 		display: flex
 		justify-content: space-between
+		@media #{$desktop}
+			justify-content: space-around
+		@media #{$tablet-land}
+			justify-content: space-around
+		@media #{$tablet-port}
+			flex-direction: column
+		@media #{$phone}
+			flex-direction: column
 	&__list-item
 		display: flex
 		flex-direction: column
@@ -36,23 +57,32 @@
 		flex-wrap: wrap
 		.box-text
 			flex-basis: 60%
+			@media #{$tablet-port}
+				flex-basis: 100%
+			@media #{$phone}
+				flex-basis: 100%
 		.box-image
 			flex-basis: 40%
+			@media #{$tablet-port}
+				flex-basis: 100%
+			@media #{$phone}
+				flex-basis: 100%
 
 .sheme
 	&__steps
 		display: flex
-		// justify-content: space-between
-		// .step-1
-		// 	flex-basis: 30%
-		// .step-2
-		// 	flex-basis: 50%
-		// .step-3
-		// 	flex-basis: 20%
+		@media #{$tablet-port}
+			flex-direction: column
+		@media #{$phone}
+			flex-direction: column
 
 .why
 	&__box
 		display: flex
+		@media #{$phone}
+			flex-direction: column
+			align-items: center
+		
 
 .callback
 	.container-callback
@@ -61,6 +91,26 @@
 	&__form-group
 		display: flex
 		justify-content: space-between
+		@media #{$desktop}
+			justify-content: space-around
+		@media #{$tablet-land}
+			justify-content: space-around
+			flex-wrap: wrap
+		@media #{$tablet-port}
+			justify-content: space-around
+			flex-wrap: wrap
+		@media #{$phone}
+			justify-content: space-around
+			flex-wrap: wrap
 	.form-group__item
 		display: flex
 		flex-direction: column
+		@media #{$tablet-land}
+			flex-basis: 45%
+			margin: 0 1.5rem 2rem 1.5rem
+		@media #{$tablet-port}
+			flex-basis: 100%
+			margin: 0 4rem 3rem 4rem
+		@media #{$phone}
+			flex-basis: 100%
+			margin: 0 3rem 3rem 3rem
